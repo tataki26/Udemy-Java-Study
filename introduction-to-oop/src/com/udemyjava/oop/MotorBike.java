@@ -19,5 +19,10 @@ public class MotorBike
 	{
 		this.speed = speed;
 	}
+	
+	int getSpeed()
+	{
+		return this.speed;
+	}
 
 }
