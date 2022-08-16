@@ -5,7 +5,14 @@ public class MotorBikeRunner
 
 	public static void main(String[] args)
 	{
-		// TODO Auto-generated method stub
+		MotorBike ducati = new MotorBike();
+		MotorBike honda = new MotorBike();
+		
+		ducati.Start();
+		honda.Start();
+		
+		ducati.speed = 100;
+		honda.speed = 130;
 
 	}
 
