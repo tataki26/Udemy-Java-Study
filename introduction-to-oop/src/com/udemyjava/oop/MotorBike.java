@@ -15,25 +15,25 @@ public class MotorBike
 	// input - speed
 	// output - void
 	// name - setSpeed
-	void setSpeed(int speed) // local variable
+	public void setSpeed(int speed) // local variable
 	{
 		if (speed > 0)
 			this.speed = speed;
 	}
 	
-	int getSpeed()
+	public int getSpeed()
 	{
 		return this.speed;
 	}
 	
-	int increaseSpeed(int howMuch)
+	public void increaseSpeed(int howMuch)
 	{
-		return this.speed += howMuch;
+		setSpeed(this.speed + howMuch);
 	}
 	
-	int decreaseSpeed(int howMuch)
+	public void decreaseSpeed(int howMuch)
 	{
-		return this.speed -= howMuch;
+		setSpeed(this.speed - howMuch);
 	}
 
 }

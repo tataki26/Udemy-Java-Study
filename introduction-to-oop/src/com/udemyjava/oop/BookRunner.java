@@ -18,6 +18,12 @@ public class BookRunner
 		artOfComputerProgramming.setNoOfCopies(100);
 		effectiveJava.setNoOfCopies(20);
 		cleanCode.setNoOfCopies(80);
+		
+		effectiveJava.increaseCopies(30);
+		cleanCode.decreaseCopies(30);
+		
+		System.out.println("effective java: "+effectiveJava.getNoOfCopies());
+		System.out.println("clean code: "+cleanCode.getNoOfCopies());
 	}
 
 }
