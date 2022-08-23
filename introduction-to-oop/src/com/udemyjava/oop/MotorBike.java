@@ -17,6 +17,8 @@ public class MotorBike
 	// name - setSpeed
 	void setSpeed(int speed) // local variable
 	{
+		System.out.println(speed); // 100
+		System.out.println(this.speed); // 0
 		this.speed = speed;
 	}
 	
