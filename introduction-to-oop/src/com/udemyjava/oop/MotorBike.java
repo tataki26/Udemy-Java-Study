@@ -11,8 +11,13 @@ public class MotorBike
 		this.speed = speed;
 	}
 	
+	MotorBike()
+	{
+		this(5);
+	}
+	
 	// behavior
-	void Start()
+	public void Start()
 	{
 		System.out.println("Bike Started");
 	}

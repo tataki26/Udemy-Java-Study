@@ -7,9 +7,11 @@ public class MotorBikeRunner
 	{
 		MotorBike ducati = new MotorBike(100);
 		MotorBike honda = new MotorBike(200);
+		MotorBike suzuki = new MotorBike();
 		
 		System.out.println("ducati: " + ducati.getSpeed()); // 100
 		System.out.println("honda: " + honda.getSpeed()); // 200
+		System.out.println("suzuki: "+suzuki.getSpeed()); // 5
 		
 		ducati.Start();
 		honda.Start();
