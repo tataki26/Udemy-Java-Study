@@ -3,6 +3,11 @@ package com.udemyjava.oop;
 public class Book
 {
 	private int noOfCopies; // member variable
+	
+	Book(int noOfCopies)
+	{
+		this.noOfCopies = noOfCopies;
+	}
 
 	public void setNoOfCopies(int noOfCopies) // local variable
 	{

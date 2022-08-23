@@ -6,6 +6,11 @@ public class MotorBike
 	// encapsulation
 	private int speed;
 	
+	MotorBike(int speed)
+	{
+		this.speed = speed;
+	}
+	
 	// behavior
 	void Start()
 	{
