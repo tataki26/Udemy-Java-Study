@@ -25,5 +25,15 @@ public class MotorBike
 	{
 		return this.speed;
 	}
+	
+	int increaseSpeed(int howMuch)
+	{
+		return this.speed += howMuch;
+	}
+	
+	int decreaseSpeed(int howMuch)
+	{
+		return this.speed -= howMuch;
+	}
 
 }
