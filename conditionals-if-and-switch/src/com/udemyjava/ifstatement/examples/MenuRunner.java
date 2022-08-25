@@ -31,19 +31,27 @@ public class MenuRunner
 		System.out.println("Number2 "+ number2);
 		System.out.println("Choice "+ choice);
 		
-		int result = 0;
-		
-		if (number2 == 1)
-			result = number1 + number2;
-		else if(number2 == 2)
-			result = number1 - number2;
-		else if(number2 == 3)
-			result = number1 / number2;
-		else
-			result = number1 * number2;
-		
-		System.out.println("Result is - "+result);
+		performOperationUsingNestedIfElse(number1, number2, choice);
 		
 	}
 
+	private static void performOperationUsingNestedIfElse(int number1, int number2, int choice)
+	{
+		int result = 0;
+		
+		if (choice == 1)
+			result = number1 + number2;
+		else if(choice == 2)
+			result = number1 - number2;
+		else if(choice == 3)
+			result = number1 / number2;
+		else if(choice == 4)
+			result = number1 * number2;
+		else
+			System.out.println("Invalid Operation");
+		
+		System.out.println("Result is - "+ result);
+		
+	}
+	
 }
