@@ -31,7 +31,8 @@ public class MenuRunner
 		System.out.println("Number2 "+ number2);
 		System.out.println("Choice "+ choice);
 		
-		performOperationUsingNestedIfElse(number1, number2, choice);
+		// performOperationUsingNestedIfElse(number1, number2, choice);
+		performOperationUsingSwitch(number1, number2, choice);
 		
 	}
 
@@ -50,6 +51,33 @@ public class MenuRunner
 		else
 			System.out.println("Invalid Operation");
 		
+		System.out.println("Result is - "+ result);
+		
+	}
+	
+	private static void performOperationUsingSwitch(int number1, int number2, int choice)
+	{
+		int result = 0;
+		
+		switch(choice)
+		{
+			case 1: 
+				result = number1 + number2;
+				break;
+			case 2: 
+				result = number1 - number2;
+				break;
+			case 3: 
+				result = number1 / number2;
+				break;
+			case 4: 
+				result = number1 * number2;
+				break;
+			default:
+				System.out.println("Invalid Operation");
+				
+		}
+
 		System.out.println("Result is - "+ result);
 		
 	}
