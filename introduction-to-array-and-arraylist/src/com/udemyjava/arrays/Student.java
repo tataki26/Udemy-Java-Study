@@ -3,23 +3,29 @@ package com.udemyjava.arrays;
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Student
 {
 
 	private String name;
-	private int[] marks;
+	private ArrayList<Integer> marks = new ArrayList<Integer>();
 	
 	public Student(String name, int... marks)
 	{
 		this.name = name;
-		this.marks = marks;
+		
+		for(int mark: marks) 
+		{
+			this.marks.add(mark);
+		}
 	}
 
 
 	public int getNumberOfMarks()
 	{	
-		return marks.length;
+		return marks.size();
 	}
 
 
@@ -38,29 +44,13 @@ public class Student
 
 	public int getMaximumMark()
 	{
-		int max = Integer.MIN_VALUE;
-		
-		for(int mark:marks)
-		{
-			if (max < mark)
-				max = mark;
-		}
-		
-		return max;
+		return Collections.max(marks);
 	}
 
 
 	public int getMinimumMark()
-	{
-		int min = Integer.MAX_VALUE;
-		
-		for(int mark:marks)
-		{
-			if (min > mark)
-				min = mark;
-		}
-		
-		return min;
+	{	
+		return Collections.min(marks);
 	}
 
 
@@ -71,6 +61,11 @@ public class Student
 		
 		return new BigDecimal(sum).divide(new BigDecimal(num), 2, RoundingMode.UP);
 		
+	}
+	
+	public String toString() 
+	{
+		return name + marks;
 	}
 
 }
