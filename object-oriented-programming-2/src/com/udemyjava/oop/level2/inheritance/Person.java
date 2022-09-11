@@ -36,4 +36,9 @@ public class Person
 		this.phoneNumber = phoneNumber;
 	}
 	
+	// Person 클래스에서 Object 클래스의 메서드를 덮어쓰기(override) 함
+	public String toString()
+	{
+		return name + "#" + email + "#" + phoneNumber + "#";
+	}
 }
