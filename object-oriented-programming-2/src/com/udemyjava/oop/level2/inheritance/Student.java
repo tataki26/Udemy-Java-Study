@@ -5,6 +5,11 @@ public class Student extends Person
 	private String collegeName;
 	private int year;
 	
+	public Student(String name) 
+	{
+		super(name);
+	}
+	
 	public String getCollegeName()
 	{
 		return collegeName;

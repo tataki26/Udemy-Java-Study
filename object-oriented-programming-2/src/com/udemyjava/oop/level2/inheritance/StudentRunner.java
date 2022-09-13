@@ -5,7 +5,7 @@ public class StudentRunner
 
 	public static void main(String[] args)
 	{
-		Student student = new Student();
+		Student student = new Student("Takityaki");
 		
 		// super class의 setter
 		// student.setName("Takityaki");
@@ -26,17 +26,17 @@ public class StudentRunner
 		System.out.println(person);
 		 */
 		
-		Employee employee = new Employee();
+		Employee employee = new Employee("Takityaki", "Programmer");
 		
-		employee.setName("Takityaki");
+		// employee.setName("Takityaki");
 		employee.setEmail("takoyaki2077@gmail.com");
 		employee.setPhoneNumber("010-1234-5678");
 		
 		employee.setEmployeeGrade('A');
-		employee.setTitle("Programmer");
+		// employee.setTitle("Programmer");
 		
 		System.out.println(employee);
-		
+		 
 	}
 
 }

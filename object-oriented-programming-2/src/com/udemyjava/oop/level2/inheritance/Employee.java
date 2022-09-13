@@ -9,6 +9,17 @@ public class Employee extends Person
 	private char employeeGrade;
 	private BigDecimal salary;
 	
+	public Employee(String name, String title)
+	{
+		// super();
+		// System.out.println("Employee Constructor");
+		
+		// 상위 클래스에 name 인자 넘기기
+		super(name);
+		this.title = title;
+		
+	}
+	
 	public String getTitle()
 	{
 		return title;
