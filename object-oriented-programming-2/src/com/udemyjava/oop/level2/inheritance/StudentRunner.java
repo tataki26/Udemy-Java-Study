@@ -11,6 +11,7 @@ public class StudentRunner
 		// student.setName("Takityaki");
 		// student.setEmail("takoyaki2077@gmail.com");
 		
+		/*
 		Person person = new Person();
 		
 		person.setName("Takityaki");
@@ -23,7 +24,19 @@ public class StudentRunner
 		
 		System.out.println(value);
 		System.out.println(person);
-
+		 */
+		
+		Employee employee = new Employee();
+		
+		employee.setName("Takityaki");
+		employee.setEmail("takoyaki2077@gmail.com");
+		employee.setPhoneNumber("010-1234-5678");
+		
+		employee.setEmployeeGrade('A');
+		employee.setTitle("Programmer");
+		
+		System.out.println(employee);
+		
 	}
 
 }
