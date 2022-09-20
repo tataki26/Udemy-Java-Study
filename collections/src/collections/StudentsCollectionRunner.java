@@ -2,7 +2,19 @@ package collections;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+
+class DescendingStudentComparator implements Comparator<Student>
+{
+
+	@Override
+	public int compare(Student student1, Student student2)
+	{
+		return Integer.compare(student2.getId(), student1.getId());
+	}
+	
+}
 
 public class StudentsCollectionRunner
 {
@@ -23,9 +35,16 @@ public class StudentsCollectionRunner
 		System.out.println(studentsAl);
 		
 		// Comparable interface 직접 구현 필요
+		// ascending order
 		Collections.sort(studentsAl);
-		System.out.println(studentsAl);
+		System.out.println("Asc " + studentsAl);
 		
+		// Collections.sort(studentsAl, new DescendingStudentComparator());
+		// System.out.println("DescendingStudentComparator " + studentsAl);
+		
+		// sort 직접 사용 시, Comparator 객체 필요
+		studentsAl.sort(new DescendingStudentComparator());
+		System.out.println("DescendingStudentComparator " + studentsAl);
 	}
 
 }
