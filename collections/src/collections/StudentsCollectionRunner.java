@@ -24,6 +24,7 @@ public class StudentsCollectionRunner
 		
 		// Comparable interface 직접 구현 필요
 		Collections.sort(studentsAl);
+		System.out.println(studentsAl);
 		
 	}
 
