@@ -12,14 +12,18 @@ public class GenericsRunner
 		list.addElement("Element1");
 		list.addElement("Element2");
 		
-		System.out.println(list);
+		String value = list.get(0);
+		
+		System.out.println(value);
 		
 		MyCustomList<Integer> list2 = new MyCustomList<>();
 		list2.addElement(Integer.valueOf(5));
 		list2.addElement(Integer.valueOf(7));
 		
-		System.out.println(list2);
-	
+		Integer value2 = list2.get(0);
+		
+		System.out.println(value2);
+		
 	}
 
 }

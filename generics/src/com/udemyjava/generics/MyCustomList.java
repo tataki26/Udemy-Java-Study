@@ -16,6 +16,11 @@ public class MyCustomList<T>
 		list.remove(element);
 	}
 	
+	public T get(int index)
+	{
+		return list.get(index);
+	}
+	
 	public String toString()
 	{
 		return list.toString();
