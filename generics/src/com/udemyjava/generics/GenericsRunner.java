@@ -19,9 +19,43 @@ public class GenericsRunner
 	{
 		list.addAll(list);
 	}
+	
+	// 상한 경계 와일드카드
+	// Number 클래스를 연장하는 아무 리스트나 받을 수 있음
+	static double sumOfNumberList(List<? extends Number> numbers)
+	{
+		double sum = 0.0;
+		
+		for(Number number:numbers)
+		{
+			sum += number.doubleValue();
+		}
+		
+		return sum;
+	}
+	
+	// 하한 경계 와일드카드
+	// Number 클래스의  모든 하위 클래스 추가 가능
+	static void addACoupleOfValues(List<? super Number> numbers)
+	{
+		numbers.add(1);
+		numbers.add(1.0);
+		numbers.add(1.0f);
+		numbers.add(1l);
+	}
 
 	public static void main(String[] args)
 	{
+		// 하한
+		List emptyList = new ArrayList<Number>();
+		addACoupleOfValues(emptyList);
+		System.out.println(emptyList);
+		
+		// 상한
+		System.out.println(sumOfNumberList(Arrays.asList(1,2,3,4,5)));
+		System.out.println(sumOfNumberList(Arrays.asList(1.1,2.1,3.1,4.1,5.1)));
+		System.out.println(sumOfNumberList(Arrays.asList(1l,2l,3l,4l,5l)));
+		
 		String strVal = doubleValue(new String());
 		Integer intVal = doubleValue(Integer.valueOf(5));
 		ArrayList arrVal = doubleValue(new ArrayList());
