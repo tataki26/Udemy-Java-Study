@@ -2,6 +2,7 @@ package com.udemyjava.functionalprogramming;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class FPNumberRunner
 {
@@ -15,6 +16,21 @@ public class FPNumberRunner
 		int sum = fpSum(numbers);
 		
 		System.out.println(sum);
+		
+		// Exercise - Print squares of first 10 numbers!
+		IntStream.range(1,10)
+			.map(e->e*e)
+			.forEach(e->System.out.println(e));
+		
+		// Map all of these to lower case and print them
+		Arrays.asList("Apple","Ant","Bat").stream()
+			.map(e -> e.toLowerCase())
+			.forEach(e->System.out.println(e));
+		
+		// Print the length of each element
+		Arrays.asList("Apple","Ant","Bat").stream()
+			.map(e -> e.length())
+			.forEach(e -> System.out.println(e));
 	
 	}
 
