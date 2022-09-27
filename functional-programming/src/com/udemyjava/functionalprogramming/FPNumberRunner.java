@@ -12,20 +12,28 @@ public class FPNumberRunner
 		
 		nomalSum(numbers);
 		
-		int sum = numbers.stream()
-			.reduce(0, (number1, number2) -> number1 + number2);
+		int sum = fpSum(numbers);
 		
 		System.out.println(sum);
 	
 	}
 
+	// avoid mutation
+	// what to do
+	private static int fpSum(List<Integer> numbers)
+	{
+		return numbers.stream()
+					.reduce(0, (number1, number2) -> number1 + number2);
+	}
+
+	// how to do
 	private static int nomalSum(List<Integer> numbers)
 	{
 		int sum = 0;
 		
 		for(int num: numbers)
 		{
-			sum += num;
+			sum += num; // mutation(sum 값이 계속 변함)
 		}
 		
 		return sum;
