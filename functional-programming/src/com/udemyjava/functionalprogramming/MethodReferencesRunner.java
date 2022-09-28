@@ -28,17 +28,17 @@ public class MethodReferencesRunner
 		.map(String::length)
 		.forEach(MethodReferencesRunner::print);
 		
-		Integer max = Arrays.asList(23,45,67,34).stream()
+		Integer max1 = Arrays.asList(23,45,67,34).stream()
 				.filter(n -> n%2 == 0)
 				.max((n1,n2) -> Integer.compare(n1,n2))
 				.orElse(0);
 		
-		Integer max = Arrays.asList(23,45,67,34).stream()
+		Integer max2 = Arrays.asList(23,45,67,34).stream()
 							.filter(MethodReferencesRunner::isEven)
 							.max(Integer::compare)
 							.orElse(0);
 		
-		System.out.println(max);
+		System.out.println(max2);
 
 	}
 
