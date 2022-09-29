@@ -36,7 +36,7 @@ class Task2 implements Runnable
 public class ThreadBasicsRunner
 {
 	
-	public static void main(String[] args)
+	public static void main(String[] args) throws InterruptedException
 	{
 		// Task1 - 101 to 199
 		System.out.print("\nTask1 Kicked Off");
@@ -54,6 +54,10 @@ public class ThreadBasicsRunner
 		task2Thread.start();
 		
 		System.out.print("\nTask3 Kicked Off");
+		
+		// wait for tasks to complete
+		task2Thread.join();
+		task1.join();
 		
 		// Task3
 		for(int i=301;i<=399;i++)
