@@ -12,11 +12,12 @@ class Amount
 		this.amount = amount;
 	}
 	
-	public void add(Amount that)
+	public void add(Amount that) throws Exception // for checked exception
 	{
 		if(!this.currency.equals(that.currency))
 		{
-			throw new RuntimeException("Currencies don't Match!!");
+			throw new Exception(
+					"Currencies don't Match!! " + this.currency + " & " + that.currency);
 		}
 		this.amount = this.amount + that.amount;
 	}
@@ -30,7 +31,7 @@ class Amount
 public class ThrowingExceptionRunner
 {
 
-	public static void main(String[] args)
+	public static void main(String[] args) throws Exception
 	{
 		Amount amount1 = new Amount("USD", 10);
 		// error -> USD + EUR = USD
