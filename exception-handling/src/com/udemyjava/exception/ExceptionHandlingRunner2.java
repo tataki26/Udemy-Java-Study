@@ -21,15 +21,29 @@ public class ExceptionHandlingRunner2
 	{
 		try 
 		{
-			String str = null;
+			//String str = null;
 			// error!!
-			str.length();
+			//str.length(); // NullPointerException
+			
+			int[] arr = {1,2};
+			int number = arr[3]; // Exception
 			
 			// not working
 			System.out.println("Method2 Ended");
-		} 
+		}
+		catch(NullPointerException ex)
+		{
+			System.out.println("Matched NullPointerException");
+			ex.printStackTrace();
+		}
+		catch(ArrayIndexOutOfBoundsException ex)
+		{
+			System.out.println("Matched ArrayIndexOutOfBoundsException");
+		}
+		// super class
 		catch(Exception ex)
 		{
+			System.out.println("Matched Exception");
 			ex.printStackTrace();
 		}
 		
