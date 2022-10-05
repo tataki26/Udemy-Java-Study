@@ -23,7 +23,7 @@ public class CheckedExceptionRunner
 		// someOtherMethod2();
 		
 		// unhandled exception
-		someOtherMethod();
+		// someOtherMethod();
 	}
 	
 	private static void someOtherMethod2() throws RuntimeException
