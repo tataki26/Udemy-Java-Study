@@ -5,6 +5,7 @@ package com.udemyjava.tips.access.package1;
 // public: able to use anywhere
 // default: only in same package
 // protected, private: not able to be used with class
+// variable: most of the time - private
 public class ClassAccessModifiers
 {
 
