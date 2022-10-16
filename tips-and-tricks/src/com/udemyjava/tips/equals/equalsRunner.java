@@ -9,6 +9,12 @@ class Client {
 		this.id = id;
 	}
 
+	// hastmap with bucket
+	// hashing function = hashcode
+	// each object is assigned to each bucket
+	// if two objects get same id, their hashcode must be same
+	// and never change its value
+	// to use equals method, hashcode is necessary
 	@Override
 	public int hashCode()
 	{
