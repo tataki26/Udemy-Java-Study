@@ -5,7 +5,19 @@ import java.util.Arrays;
 enum Season {
 	// ordinal - position of value
 	// 0,   1,      2,      3
-	WINTER, SPRING, SUMMER, FALL;
+	WINTER(1), SPRING(2), SUMMER(3), FALL(4); // regardless of position
+	
+	private int value;
+	
+	private Season(int value) {
+		this.value = value;
+	}
+
+	public int getValue()
+	{
+		return value;
+	}
+	
 }
 
 public class EnumRunner
@@ -24,6 +36,7 @@ public class EnumRunner
 		System.out.println(season1.name()); // WINTER
 		
 		System.out.println(season.SPRING.ordinal());
+		System.out.println(season.SPRING.getValue());
 		
 		// all values of enum
 		System.out.println(Arrays.toString(Season.values()));
