@@ -1,5 +1,12 @@
 package com.udemyjava.tips.nonaccess.package1;
 
+// static final
+// static -> class level
+// final -> not able to extend
+// static final -> not variable (constants)
+// hard coding is not recommended -> not able to understand the meaning of value
+// public static final int SECONDS_IN_MINUTE = 60;
+
 class Player{
 	// instance variable, member variable (unique per member)
 	private String name;
