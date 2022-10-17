@@ -10,7 +10,9 @@ class Player{
 		count++;
 	}
 	
-	public int getCount() {
+	// shared method
+	public static int getCount() {
+		// only static variable
 		return count;
 	}
 }
@@ -21,13 +23,16 @@ public class StaticModifierRunner
 	public static void main(String[] args)
 	{
 		Player player1 = new Player("Rakan");
-		Player player2 = new Player("Jaya");
+		System.out.println(Player.getCount()); // 1
 		
-		// separate instance
-		// static -> execute after player2 is created
-		System.out.println(player1.getCount()); // 1 -> static: 2
-		System.out.println(player2.getCount()); // 1 -> static: 2
-
+		Player player2 = new Player("Jaya");
+		System.out.println(Player.getCount()); // 2
+		
+		// not recommended
+		// static -> use class name
+		// shared to all instances of the class
+		// System.out.println(player2.getCount());
+		
 	}
 
 }
