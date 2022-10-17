@@ -2,24 +2,6 @@ package com.udemyjava.tips.enums;
 
 import java.util.Arrays;
 
-enum Season {
-	// ordinal - position of value
-	// 0,   1,      2,      3
-	WINTER(1), SPRING(2), SUMMER(3), FALL(4); // regardless of position
-	
-	private int value;
-	
-	private Season(int value) {
-		this.value = value;
-	}
-
-	public int getValue()
-	{
-		return value;
-	}
-	
-}
-
 public class EnumRunner
 {
 	// able to use as instance variable
