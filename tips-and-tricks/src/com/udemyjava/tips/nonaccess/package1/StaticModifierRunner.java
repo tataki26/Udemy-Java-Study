@@ -1,7 +1,9 @@
 package com.udemyjava.tips.nonaccess.package1;
 
 class Player{
+	// instance variable, member variable (unique per member)
 	private String name;
+	// class variable
 	private static int count; // only one instance, shared variable
 	
 	public Player(String name) {
@@ -10,11 +12,27 @@ class Player{
 		count++;
 	}
 	
-	// shared method
+	// shared method(class method)
 	public static int getCount() {
+		// not allowed
+		// System.out.println(name); // instance variable
+		// System.out.println(getName()); // instance method
 		// only static variable
 		return count;
 	}
+	
+	public String getName()
+	{
+		// allowed
+		System.out.println(count); // static variable in non-static method
+		return name;
+	}
+
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
 }
 
 public class StaticModifierRunner
