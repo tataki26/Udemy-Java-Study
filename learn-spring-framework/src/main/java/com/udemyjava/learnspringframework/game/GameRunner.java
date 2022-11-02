@@ -14,6 +14,7 @@ public class GameRunner
 	
 	public GameRunner(GamingConsole game)
 	{
+		System.out.println("Using Constructor");
 		this.game = game;
 	}
 	
