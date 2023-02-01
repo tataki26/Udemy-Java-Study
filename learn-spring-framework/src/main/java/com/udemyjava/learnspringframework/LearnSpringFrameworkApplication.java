@@ -3,12 +3,13 @@ package com.udemyjava.learnspringframework;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import com.udemyjava.learnspringframework.game.GameRunner;
-import com.udemyjava.learnspringframework.game.GamingConsole;
-import com.udemyjava.learnspringframework.game.MarioGame;
-import com.udemyjava.learnspringframework.game.SuperContraGame;
 
+// default
+// the target of component scan: package(+ sub-packages)
+// @ComponentScan("com.udemyjava.learnspringframework")
 @SpringBootApplication
 public class LearnSpringFrameworkApplication {
 
